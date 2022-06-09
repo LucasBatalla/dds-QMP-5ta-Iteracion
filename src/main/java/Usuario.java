@@ -5,9 +5,16 @@ import java.util.stream.Collectors;
 
 public class Usuario {
   private List<Guardarropa> guardarropas;
-  private List<Guardarropa> guardarropasCompartidos;
+  private List<GuardarropaCompartido> guardarropasCompartidos;
   private List<PropuestaModificacion> propuestasModificacion;
+  private List<PropuestaModificacion> historialPropuestasAceptadas;
 
+
+  public void deshacerPropuestaAceptada(PropuestaModificacion propuestaModificacion){
+    if(historialPropuestasAceptadas.contains(propuestaModificacion)){
+      propuestaModificacion.deshacerModificacion(this);
+    }
+  }
 
   public void recibirPropuestaDeModificacion(PropuestaModificacion propuesta){
     propuestasModificacion.add(propuesta);
@@ -23,6 +30,7 @@ public class Usuario {
 
   public void aceptarPropuesta(PropuestaModificacion propuestaModificacion){
     propuestaModificacion.aceptarPropuesta(this, propuestaModificacion.getGuardarropa());
+    historialPropuestasAceptadas.add(propuestaModificacion);
   }
   public void rechazarrPropuesta(PropuestaModificacion propuestaModificacion){
     propuestasModificacion.remove(propuestaModificacion);
