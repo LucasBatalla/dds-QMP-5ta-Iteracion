@@ -11,7 +11,7 @@ public class Guardarropa {
 
 
   public CriterioRopa getCriterio() {
-    return criterio
+    return criterio;
   }
 
   public List<Prenda> getPrendas() {

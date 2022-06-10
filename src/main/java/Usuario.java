@@ -32,7 +32,7 @@ public class Usuario {
     propuestaModificacion.aceptarPropuesta(this, propuestaModificacion.getGuardarropa());
     historialPropuestasAceptadas.add(propuestaModificacion);
   }
-  public void rechazarrPropuesta(PropuestaModificacion propuestaModificacion){
+  public void rechazarPropuesta(PropuestaModificacion propuestaModificacion){
     propuestasModificacion.remove(propuestaModificacion);
   }
 
@@ -60,7 +60,7 @@ public class Usuario {
     if(guardarropas.stream().anyMatch(guardarropa -> guardarropa.getCriterio() == criterio)){
       getGuardarropaSegun(criterio).agregarPrenda(prenda);
     }
-    Guardarropa nuevoGuardarropa = new Guardarropa(criterio;
+    Guardarropa nuevoGuardarropa = new Guardarropa(criterio);
     nuevoGuardarropa.agregarPrenda(prenda);
     agregarGuardarropa(nuevoGuardarropa);
   }
