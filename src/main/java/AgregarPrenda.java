@@ -6,6 +6,7 @@ public class AgregarPrenda extends PropuestaModificacion{
     super(prenda, guardarropa);
   }
 
+  @Override
   public void deshacerModificacion(Usuario usuario) {
     usuario.quitarPrendaDe(prenda, guardarropa);
   }

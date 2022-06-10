@@ -14,6 +14,9 @@ public class Guardarropa {
     return criterio;
   }
 
+  public boolean contienePrenda(Prenda prenda){
+    return prendas.contains(prenda);
+  }
   public List<Prenda> getPrendas() {
     return prendas;
   }

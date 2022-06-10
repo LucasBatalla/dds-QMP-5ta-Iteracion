@@ -45,13 +45,13 @@ public class Usuario {
   }
 
   public void agregarPrendaA(Prenda prenda, Guardarropa guardarropa){
-    if(!guardarropa.getPrendas().contains(prenda)){
+    if(!guardarropa.contienePrenda(prenda)){
       guardarropa.agregarPrenda(prenda);
     }
   }
 
   public void quitarPrendaDe(Prenda prenda, Guardarropa guardarropa){
-    if(guardarropa.getPrendas().contains(prenda)){
+    if(guardarropa.contienePrenda(prenda)){
       guardarropa.quitarPrenda(prenda);
     }
   }

@@ -19,6 +19,5 @@ public abstract class PropuestaModificacion {
 
   public abstract void aceptarPropuesta(Usuario usuario, Guardarropa guardarropa);
 
-  public void deshacerModificacion(Usuario usuario) {
-  }
+  public abstract void deshacerModificacion(Usuario usuario);
 }
